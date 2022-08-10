@@ -1,0 +1,25 @@
+pipeline {
+    agent any 
+    stages {
+        stage('pull') { 
+            steps {
+                 git 'https://github.com/phuntru/studentapp-ui.git'
+            }
+        }
+        stage('Build') { 
+            steps {
+                 echo 'Buil Successful' 
+            }
+        }
+        stage('Test') { 
+            steps {
+                echo 'test Successful' 
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                echo 'deploy Successful' 
+            }
+        }
+    }
+}
